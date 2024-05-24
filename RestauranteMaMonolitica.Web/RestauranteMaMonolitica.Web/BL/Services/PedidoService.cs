@@ -1,6 +1,9 @@
-﻿namespace RestauranteMaMonolitica.Web.BL.Services
+﻿using RestauranteMaMonolitica.Web.BL.Interfaces;
+
+namespace RestauranteMaMonolitica.Web.BL.Services
 {
-    public class PedidoService
+    public class PedidoService : IPedidoService
     {
+
     }
 }
