@@ -2,7 +2,9 @@
 
 namespace RestauranteMaMonolitica.Web.BL.Services
 {
-    public class DetallePedidoService :IDetallePedidoService
+    public class MenuService :IMenuService
     {
+
+
     }
 }
