@@ -28,3 +28,4 @@ C:\proyectoProg2\RestauranteMaMonolitica\RestauranteMaMonolitica.Web\Restaurante
 C:\proyectoProg2\RestauranteMaMonolitica\RestauranteMaMonolitica.Web\RestauranteMaMonolitica.Web\obj\Debug\net8.0\RestauranteMaMonolitica.Web.pdb
 C:\proyectoProg2\RestauranteMaMonolitica\RestauranteMaMonolitica.Web\RestauranteMaMonolitica.Web\obj\Debug\net8.0\RestauranteMaMonolitica.Web.genruntimeconfig.cache
 C:\proyectoProg2\RestauranteMaMonolitica\RestauranteMaMonolitica.Web\RestauranteMaMonolitica.Web\obj\Debug\net8.0\ref\RestauranteMaMonolitica.Web.dll
+C:\proyectoProg2\RestauranteMaMonolitica\RestauranteMaMonolitica.Web\RestauranteMaMonolitica.Web\obj\Debug\net8.0\RestauranteMaMonolitica.Web.sourcelink.json
