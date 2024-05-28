@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\proyectoProg2\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj": {}
+    "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj": {}
   },
   "projects": {
-    "C:\\proyectoProg2\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj": {
+    "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\proyectoProg2\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj",
+        "projectUniqueName": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj",
         "projectName": "RestauranteMaMonolitica.Web",
-        "projectPath": "C:\\proyectoProg2\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj",
+        "projectPath": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\proyectoProg2\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\obj\\",
+        "outputPath": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
