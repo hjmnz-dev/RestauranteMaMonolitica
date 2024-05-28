@@ -1,6 +1,6 @@
 ﻿namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class Factura
+    public class FacturaModel
     {
     }
 }

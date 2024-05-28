@@ -5,6 +5,6 @@ namespace RestauranteMaMonolitica.Web.Data.Interfaces
     public interface IFacturaDb
     {
 
-        void save(Factura factura);
+        void save(FacturaDb factura);
     }
 }
