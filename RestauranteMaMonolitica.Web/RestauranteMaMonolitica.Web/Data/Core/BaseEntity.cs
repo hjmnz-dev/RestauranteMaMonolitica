@@ -1,6 +1,6 @@
 ﻿namespace RestauranteMaMonolitica.Web.Data.Core
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity 
     {
         protected BaseEntity() { 
             this.CreationDate = DateTime.Now;
@@ -15,7 +15,7 @@
         public int? UserMod { get; set; }
         public int ModifyUser { get; set; }
         public int DeletedUser { get; set; }
-        public DateTime? DeletedDate { get; set; }
+        public DateTime? DeletedDate { get; set;}
 
         public bool? Deleted { get; set; }
     }
