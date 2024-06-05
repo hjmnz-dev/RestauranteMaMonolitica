@@ -1,7 +1,68 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\core\\facturahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\core\\facturahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\core\\facturabaseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\core\\facturabaseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\core\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\core\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\dbobjects\\facturadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\dbobjects\\facturadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\interfaces\\ifacturadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\interfaces\\ifacturadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\models\\facturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\facturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\models\\facturaupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\facturaupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\models\\facturaremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\facturaremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\context\\restaurantecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\context\\restaurantecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\restaurantemamonolitica.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\restaurantemamonolitica.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\exceptions\\facturadbexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\exceptions\\facturadbexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\bl\\dtos\\facturadtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\bl\\dtos\\facturadtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyectoprogram2\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\models\\facturasavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\facturasavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +70,201 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FacturaHelper.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Core\\FacturaHelper.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Core\\FacturaHelper.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Core\\FacturaHelper.cs*",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Core\\FacturaHelper.cs*",
+              "ViewState": "AQIAABUAAAAAAAAAAAA5wCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T00:15:07.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FacturaDb.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\DbObjects\\FacturaDb.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\DbObjects\\FacturaDb.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\DbObjects\\FacturaDb.cs*",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\DbObjects\\FacturaDb.cs*",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwDIAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T19:23:21.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IFacturaDb.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Interfaces\\IFacturaDb.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Interfaces\\IFacturaDb.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Interfaces\\IFacturaDb.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Interfaces\\IFacturaDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T02:21:51.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FacturaRemoveModel.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaRemoveModel.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaRemoveModel.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaRemoveModel.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaRemoveModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T15:55:26.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FacturaUpdateModel.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaUpdateModel.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaUpdateModel.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaUpdateModel.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaUpdateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T16:42:15.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FacturaModel.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaModel.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaModel.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaModel.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:27:24.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FacturaBaseEntity.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Core\\FacturaBaseEntity.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Core\\FacturaBaseEntity.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Core\\FacturaBaseEntity.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Core\\FacturaBaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T19:31:56.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Core\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Core\\BaseEntity.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Core\\BaseEntity.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Core\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T18:26:59.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RestauranteContext.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Context\\RestauranteContext.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Context\\RestauranteContext.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Context\\RestauranteContext.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Context\\RestauranteContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T00:48:00.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FacturaDbException.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Exceptions\\FacturaDbException.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Exceptions\\FacturaDbException.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Exceptions\\FacturaDbException.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Exceptions\\FacturaDbException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:11:20.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Factura.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Entities\\Factura.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Entities\\Factura.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Entities\\Factura.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Entities\\Factura.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T16:41:48.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FacturaController.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Controllers\\FacturaController.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Controllers\\FacturaController.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Controllers\\FacturaController.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Controllers\\FacturaController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:12:55.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FacturaDtoAdd.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\BL\\Dtos\\FacturaDtoAdd.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\BL\\Dtos\\FacturaDtoAdd.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\BL\\Dtos\\FacturaDtoAdd.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\BL\\Dtos\\FacturaDtoAdd.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T20:49:12.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FacturaSaveModel.cs",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaSaveModel.cs",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaSaveModel.cs",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\FacturaSaveModel.cs",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Models\\FacturaSaveModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T16:42:13.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RestauranteMaMonolitica.Web.csproj",
+              "DocumentMoniker": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj",
+              "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj",
+              "ToolTip": "C:\\proyectoProgram2\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj*",
+              "RelativeToolTip": "RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-04T01:08:28.797Z",
+              "EditorCaption": ""
             }
           ]
         }

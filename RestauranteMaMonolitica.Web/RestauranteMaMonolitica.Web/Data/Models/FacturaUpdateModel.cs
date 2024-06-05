@@ -2,14 +2,11 @@
 
 namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class FacturaModel : FacturaBaseEntity
+    public class FacturaUpdateModel : FacturaBaseEntity
     {
-
         public int idFactura { get; set; }
        
 
-        public int idPedido { get; set; }
-
-        public string? Pedido { get; set;}
+       
     }
 }
