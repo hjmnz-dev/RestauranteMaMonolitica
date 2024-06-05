@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\core\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\core\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\dbobjects\\menudb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\dbobjects\\menudb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\repositores\\menurepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\repositores\\menurepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\models\\menuupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\menuupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\interfaces\\imenudb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,14 +35,6 @@
       "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\menumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\repositores\\menurepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\repositores\\menurepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\models\\menuupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\menuupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\interfaces\\imenurepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\interfaces\\imenurepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\models\\menusavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\models\\menusavemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\data\\core\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|solutionrelative:restaurantemamonolitica.web\\data\\core\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F25D6375-5CF4-4660-BC79-171C89882EAC}|RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj|c:\\proyecto-programacion2-legacy\\restaurantemamonolitica\\restaurantemamonolitica.web\\restaurantemamonolitica.web\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,8 +81,12 @@
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IMenuRepositories.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Interfaces\\IMenuRepositories.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Interfaces\\IMenuRepositories.cs",
@@ -95,13 +99,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MenuRepositories.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Repositores\\MenuRepositories.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Repositores\\MenuRepositories.cs",
               "ToolTip": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Repositores\\MenuRepositories.cs",
               "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\Repositores\\MenuRepositories.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAAiAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwGAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T20:32:15.846Z",
               "EditorCaption": ""
@@ -121,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MenuDbException.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Exceptions\\MenuDbException.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Exceptions\\MenuDbException.cs",
@@ -134,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Entities\\Menu.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Entities\\Menu.cs",
@@ -147,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MenuRemoveModelcs.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\MenuRemoveModelcs.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\MenuRemoveModelcs.cs",
@@ -186,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Core\\BaseEntity.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Core\\BaseEntity.cs",
@@ -199,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "MenuUpdateModel.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\MenuUpdateModel.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\MenuUpdateModel.cs",
@@ -212,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MenuSaveModel.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\MenuSaveModel.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\MenuSaveModel.cs",
@@ -225,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "MenuModel.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Models\\MenuModel.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Models\\MenuModel.cs",
@@ -238,20 +242,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MenuDb.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\DbObjects\\MenuDb.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\DbObjects\\MenuDb.cs",
               "ToolTip": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\DbObjects\\MenuDb.cs",
               "RelativeToolTip": "RestauranteMaMonolitica.Web\\Data\\DbObjects\\MenuDb.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA2wCQAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T00:09:05.264Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "IMenuDb.cs",
               "DocumentMoniker": "C:\\proyecto-programacion2-legacy\\RestauranteMaMonolitica\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Data\\Interfaces\\IMenuDb.cs",
               "RelativeDocumentMoniker": "RestauranteMaMonolitica.Web\\Data\\Interfaces\\IMenuDb.cs",
