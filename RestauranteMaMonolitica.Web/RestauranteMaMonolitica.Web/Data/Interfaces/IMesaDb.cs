@@ -1,11 +1,10 @@
 ﻿using RestauranteMaMonolitica.Web.Data.DbObjects;
+using RestauranteMaMonolitica.Web.Data.Models;
 
 namespace RestauranteMaMonolitica.Web.Data.Interfaces
 {
     public interface IMesaDb
     {
-        void save (MesaDb mesa) 
-        {
-        }
+        string? GetMesas();
     }
 }
