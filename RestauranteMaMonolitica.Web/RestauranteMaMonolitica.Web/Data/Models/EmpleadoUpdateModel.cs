@@ -2,8 +2,7 @@
 
 namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class ClienteModel : Cliente
+    public class EmpleadoUpdateModel : Empleado
     {
-      
     }
 }

@@ -1,6 +1,9 @@
-﻿namespace RestauranteMaMonolitica.Web.Data.Models
+﻿using RestauranteMaMonolitica.Web.Data.Entities;
+
+namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class EmpleadoModel
+    public class EmpleadoModel : Empleado
     {
+
     }
 }

@@ -14,8 +14,8 @@
 
         public int? UserMod { get; set; }
         public int ModifyUser { get; set; }
-        public int DeletedUser { get; set; }
-        public DateTime? DeletedDate { get; set; }
+        public int DeleteUser { get; set; }
+        public DateTime? DeleteDate { get; set; }
 
         public bool? Deleted { get; set; }
     }
