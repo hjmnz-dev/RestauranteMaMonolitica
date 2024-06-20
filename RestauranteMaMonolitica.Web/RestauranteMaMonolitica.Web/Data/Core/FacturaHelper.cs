@@ -30,7 +30,8 @@ namespace RestauranteMaMonolitica.Web.Data.Helpers
                 
                 IdFactura = factura.IdFactura,
                 Fecha = factura.Fecha,
-                Total = factura.Total
+                Total = factura.Total,
+                creation_date = factura.creation_date
             };
 
         }
