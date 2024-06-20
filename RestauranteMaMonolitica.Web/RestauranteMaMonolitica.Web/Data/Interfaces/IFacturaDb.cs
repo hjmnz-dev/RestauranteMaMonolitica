@@ -6,7 +6,7 @@ namespace RestauranteMaMonolitica.Web.Data.Interfaces
     public interface IFacturaDb
     {
 
-        void saveFactura(FacturaSaveModel facturaSave);
+        void saveFactura(FacturaSaveModel factura);
 
         void updateFactura(FacturaUpdateModel facturaUpdate);
 
@@ -14,9 +14,9 @@ namespace RestauranteMaMonolitica.Web.Data.Interfaces
 
      
 
-        List<FacturaModel> GetFacturas();
+        List<FacturaGetModel> GetFacturas();
 
-        FacturaModel GetFactura(int idFactura);
+        FacturaGetModel GetFactura(int IdFactura);
         
     }
 }

@@ -2,9 +2,9 @@
 
 namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class FacturaRemoveModel : FacturaBaseEntity
+    public class FacturaRemoveModel : BaseEntity
     {
-        public int idFactura { get; set; }
+        public int IdFactura { get; set; }
        
 
 

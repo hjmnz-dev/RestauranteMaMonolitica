@@ -3,6 +3,7 @@ using RestauranteMaMonolitica.Web.Data.Entities;
 using RestauranteMaMonolitica.Web.Data.Exceptions;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models;
+using RestauranteMaMonolitica.Web.Data.Core;
 using RestauranteMaMonolitica.Web.Data.Helpers;
 
 namespace RestauranteMaMonolitica.Web.Data.DbObjects
@@ -16,10 +17,10 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
             this.context = context;
         }
 
-        public void saveFactura(FacturaSaveModel facturaSaveModel)
+        public void saveFactura(FacturaSaveModel facturaSave)
         {
-            var factura = new Factura();
-            FacturaHelper.MapFacturaSaveModel(facturaSaveModel, factura);
+            Factura factura = new Factura();
+            FacturaHelper.MapFacturaSaveModel(facturaSave, factura);
 
             context.Factura.Add(factura);
             context.SaveChanges();
@@ -27,10 +28,10 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
 
         public void updateFactura(FacturaUpdateModel updateModel)
         {
-            Factura facturaToUpdate = FacturaHelper.FindFacturaById(context, updateModel.idFactura);
-
-            facturaToUpdate.ModifyDate = updateModel.ModifyDate;
-            facturaToUpdate.ModifyUser = updateModel.ModifyUser;
+            Factura facturaToUpdate = FacturaHelper.FindFacturaById(context, updateModel.IdFactura);
+            
+            facturaToUpdate.modify_date = updateModel.ChangeDate;
+            facturaToUpdate.modify_user = updateModel.ChangeUser;
             facturaToUpdate.Fecha = updateModel.Fecha;
             facturaToUpdate.Total = updateModel.Total;
 
@@ -40,22 +41,22 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
 
         public void removeFactura(FacturaRemoveModel facturaRemove)
         {
-            Factura facturaToDelete = FacturaHelper.FindFacturaById(context, facturaRemove.idFactura);
+            Factura facturaToDelete = FacturaHelper.FindFacturaById(context, facturaRemove.IdFactura);
 
-            facturaToDelete.Deleted = facturaRemove.Deleted;
-            facturaToDelete.DeletedDate = facturaRemove.DeletedDate;
-            facturaToDelete.DeletedUser = facturaRemove.DeletedUser;
+            facturaToDelete.deleted = facturaRemove.deleted;
+            facturaToDelete.delete_date = facturaRemove.delete_date;
+            facturaToDelete.delete_user = facturaRemove.delete_user;
 
             context.Factura.Update(facturaToDelete);
             context.SaveChanges();
         }
 
-        public List<FacturaModel> GetFacturas()
+        public List<FacturaGetModel> GetFacturas()
         {
             return context.Factura.Select(factura => FacturaHelper.MapToFacturaModel(factura)).ToList();
         }
 
-        public FacturaModel GetFactura(int idFactura)
+        public FacturaGetModel GetFactura(int idFactura)
         {
             var factura = FacturaHelper.FindFacturaById(context, idFactura);
             return FacturaHelper.MapToFacturaModel(factura);

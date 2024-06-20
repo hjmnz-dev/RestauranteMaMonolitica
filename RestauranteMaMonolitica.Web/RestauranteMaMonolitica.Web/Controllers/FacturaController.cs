@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
+using RestauranteMaMonolitica.Web.Data.Models;
 
 namespace RestauranteMaMonolitica.Web.Controllers
 {
@@ -10,9 +11,9 @@ namespace RestauranteMaMonolitica.Web.Controllers
     {
         private readonly IFacturaDb facturaDb;
 
-        public FacturaController(IFacturaDb FacturaDb) 
+        public FacturaController(IFacturaDb facturaDb) 
         {
-           this.facturaDb = FacturaDb;
+           this.facturaDb = facturaDb;
            
         }
         // GET: FacturaController
@@ -25,7 +26,8 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: FacturaController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var Factura = facturaDb.GetFactura(id);
+            return View(Factura);
         }
 
         // GET: FacturaController/Create
@@ -37,10 +39,12 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // POST: FacturaController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(FacturaSaveModel facturaSave)
         {
             try
-            {
+            {   facturaSave.ChangeDate = DateTime.Now;
+                facturaSave.ChangeUser = 1;
+                this.facturaDb.saveFactura(facturaSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -52,16 +56,20 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: FacturaController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var Factura = facturaDb.GetFactura(id);
+            return View(Factura);
         }
 
         // POST: FacturaController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(FacturaUpdateModel facturaUpdateModel)
         {
             try
             {
+               facturaUpdateModel.ChangeDate = DateTime.Now;
+               facturaUpdateModel.ChangeUser = 1;
+                this.facturaDb.updateFactura(facturaUpdateModel);
                 return RedirectToAction(nameof(Index));
             }
             catch

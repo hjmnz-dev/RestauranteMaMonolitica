@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using RestauranteMaMonolitica.Web.Data.Context;
+using RestauranteMaMonolitica.Web.Data.DbObjects;
+using RestauranteMaMonolitica.Web.Data.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<RestauranteContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RestauranteContext"))); 
+
+builder.Services.AddScoped<IFacturaDb, FacturaDb>();
 
 var app = builder.Build();
 

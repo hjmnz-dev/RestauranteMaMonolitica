@@ -1,11 +1,10 @@
-﻿using RestauranteMaMonolitica.Web.Data.Core;
-
-namespace RestauranteMaMonolitica.Web.Data.Models
+﻿namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class FacturaSaveModel : FacturaBaseEntity
+    public class FacturaSaveModel : FacturaBaseModel
     {
-
-       
+        
+        
+      
 
         
 

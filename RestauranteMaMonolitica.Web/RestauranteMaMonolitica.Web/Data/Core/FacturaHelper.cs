@@ -3,43 +3,48 @@ using RestauranteMaMonolitica.Web.Data.Entities;
 using RestauranteMaMonolitica.Web.Data.Exceptions;
 using RestauranteMaMonolitica.Web.Data.Models;
 
+
 namespace RestauranteMaMonolitica.Web.Data.Helpers
 {
 
-    //si le soy honesto profe cree esta clase porque no estaba seguro de donde colocar estos metodosw
+    //si le soy honesto profe cree esta clase porque no estaba seguro de donde colocar estos metodos
     public static class FacturaHelper
     {
-        public static Factura FindFacturaById(RestauranteContext context, int idFactura)
+        public static Factura FindFacturaById(RestauranteContext context, int IdFactura)
         {
-            var factura = context.Factura.Find(idFactura);
+            var factura = context.Factura.Find(IdFactura);
 
             if (factura == null)
             {
-                throw new FacturaDbException("La factura no se encuentra registrada");
+                throw new FacturaDbException($"No se encontro el departamento con el id {IdFactura}");
             }
 
             return factura;
         }
 
-        public static FacturaModel MapToFacturaModel(Factura factura)
+        public static FacturaGetModel MapToFacturaModel(Factura factura)
         {
-            return new FacturaModel
+            
+            return new FacturaGetModel
             {
-                idFactura = factura.idFactura,
-                idPedido = factura.idPedido,
+                
+                IdFactura = factura.IdFactura,
                 Fecha = factura.Fecha,
                 Total = factura.Total
             };
+
         }
 
         public static void MapFacturaSaveModel(FacturaSaveModel saveModel, Factura factura)
         {
+        
             factura.Total = saveModel.Total;
             factura.Fecha = saveModel.Fecha;
-            factura.CreationDate = saveModel.CreationDate;
-            factura.CreationUser = saveModel.CreationUser;
+            factura.creation_date = saveModel.ChangeDate;
+            factura.creation_user = saveModel.ChangeUser;
         }
 
     }
 }
 
+    
