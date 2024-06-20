@@ -44,7 +44,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
         {
             try
             {
-                menuSaveMode.modify_date = DateTime.Now;
+                menuSaveMode.creation_date = DateTime.Now;
                 menuSaveMode.creation_user = 1;
                 this._menuRepository.Save(menuSaveMode);
                 return RedirectToAction(nameof(Index));

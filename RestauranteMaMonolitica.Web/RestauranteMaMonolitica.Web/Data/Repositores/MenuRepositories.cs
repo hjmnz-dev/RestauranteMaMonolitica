@@ -25,6 +25,7 @@ namespace RestauranteMaMonolitica.Web.Data.Repositores
                 Nombre = menuSave.Nombre,
                 Precio = menuSave.Precio,
                 creation_user = menuSave.creation_user,
+                creation_date =menuSave.creation_date,
             };
             this.context.Menu.Add(menu);
             this.context.SaveChanges();
