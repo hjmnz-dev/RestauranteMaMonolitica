@@ -24,7 +24,7 @@ namespace RestauranteMaMonolitica.Web.Data.Repositores
                 Descripcion = menuSave.Descripcion,
                 Nombre = menuSave.Nombre,
                 Precio = menuSave.Precio,
-                CreationUser = menuSave.CreationUser,
+                creation_user = menuSave.creation_user,
             };
             this.context.Menu.Add(menu);
             this.context.SaveChanges();
@@ -38,12 +38,12 @@ namespace RestauranteMaMonolitica.Web.Data.Repositores
 
             }
             Menu menu = this.context.Menu.Find(menuUpdate.IdPlato);
-            menu.ModifyDate = menuUpdate.ModifyDate;
-            menu.UserMod = menuUpdate.UserMod;
+            menu.modify_date = menuUpdate.ModifyDate;
             menu.Nombre = menuUpdate.Nombre;
             menu.Descripcion = menuUpdate.Descripcion;
             menu.Precio = menuUpdate.Precio;
             menu.Categoria = menuUpdate.Categoria;
+            menu.modify_user = menuUpdate.ModifyUser;
 
             this.context.Update(menu);
             this.context.SaveChanges();
@@ -57,19 +57,20 @@ namespace RestauranteMaMonolitica.Web.Data.Repositores
                 {
                     throw new MenuDbException("El menu tubo un error al elimar un dato");
                 }
-                menuDelete.Deleted = menuRemoveModel.Deleted;
-                menuDelete.DeletedDate = menuRemoveModel.DeletedDate;
-                menuDelete.DeletedUser = menuRemoveModel.DeletedUser;
+                menuDelete.deleted = menuRemoveModel.deleted;
+                menuDelete.delete_date = menuRemoveModel.deleted_date;
+                menuDelete.delete_user = menuRemoveModel.deleted_user;
 
                 this.context.Menu.Update(menuDelete);
                 this.context.SaveChanges();
             }
         }
 
-        public List<MenuModel> GetMenus()
+        public List<MenuGetModel> GetMenus()
         {
-            return this.context.Menu.Select(Menus => new MenuModel()
+            return this.context.Menu.Select(Menus => new MenuGetModel()
             {
+
                 IdPlato = Menus.IdPlato,
                 Categoria = Menus.Categoria,
                 Descripcion = Menus.Descripcion,
@@ -77,16 +78,16 @@ namespace RestauranteMaMonolitica.Web.Data.Repositores
                 Precio = Menus.Precio,
             }).ToList();
         }
-        public async Task<MenuModel> GetMenu(int idMenu)
+        public MenuGetModel GetMenu(int idMenu)
         {
-            var menu = await this.context.Menu.FindAsync(idMenu);
+            var menu = this.context.Menu.Find(idMenu);
 
             if (menu == null)
             {
                 throw new MenuDbException("Menu not found");
             }
 
-            return new MenuModel()
+            return new MenuGetModel()
             {
                 IdPlato = menu.IdPlato,
                 Categoria = menu.Categoria,

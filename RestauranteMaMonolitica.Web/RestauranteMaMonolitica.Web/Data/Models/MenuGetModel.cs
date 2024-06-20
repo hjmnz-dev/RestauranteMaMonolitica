@@ -2,7 +2,7 @@
 
 namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class MenuModel :Menu
+    public class MenuGetModel : MenuModelBase
     {
 
     }

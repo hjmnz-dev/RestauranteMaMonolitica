@@ -16,7 +16,7 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
             _menuRepositories = menuRepositories;
         }
 
-        public List<MenuModel> GetMenus()
+        public List<MenuGetModel> GetMenus()
         {
             return _menuRepositories.GetMenus();
         }
@@ -35,9 +35,9 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
         {
             _menuRepositories.Uptade(menuUpdate);
         }
-        public async Task<MenuModel> GetMenu(int idMenu)
+        public MenuGetModel GetMenu(int idMenu)
         {
-            return await _menuRepositories.GetMenu(idMenu);
+            return  _menuRepositories.GetMenu(idMenu);
         }
     }
 }

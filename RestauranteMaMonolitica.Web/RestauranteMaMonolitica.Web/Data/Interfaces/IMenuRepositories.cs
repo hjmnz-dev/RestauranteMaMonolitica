@@ -7,8 +7,8 @@ namespace RestauranteMaMonolitica.Web.Data.Interfaces
         void Save(MenuSaveModel menuSave);
         void Uptade(MenuUpdateModel menuUpdate);
         void Remove(MenuRemoveModelcs menuRemoveModel);
-        List<MenuModel> GetMenus();
-        Task<MenuModel> GetMenu(int idMenu); 
+        List<MenuGetModel> GetMenus();
+       public MenuGetModel GetMenu(int idMenu); 
 
 
 

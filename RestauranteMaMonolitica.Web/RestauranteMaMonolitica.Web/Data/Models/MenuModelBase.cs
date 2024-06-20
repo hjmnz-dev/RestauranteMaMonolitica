@@ -1,10 +1,10 @@
-﻿using RestauranteMaMonolitica.Web.Data.Core;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace RestauranteMaMonolitica.Web.Data.Entities
+namespace RestauranteMaMonolitica.Web.Data.Models
 {
-    public class Menu: BaseEntity
+    public abstract class MenuModelBase 
     {
+
         [Key]
         public int? IdPlato { get; set; }
         public string Nombre { get; set; }
