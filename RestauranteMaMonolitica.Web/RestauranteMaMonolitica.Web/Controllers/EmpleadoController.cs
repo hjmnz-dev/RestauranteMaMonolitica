@@ -13,7 +13,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
 
         private readonly EmpleadoRepositories empleadoRepositories;
 
-        public EmpleadoController(EmpleadoRepositories empleadoRepositorie)
+        public EmpleadoController(EmpleadoRepositories empleadoRepositories)
         {
             this.empleadoRepositories = empleadoRepositories;
         }
