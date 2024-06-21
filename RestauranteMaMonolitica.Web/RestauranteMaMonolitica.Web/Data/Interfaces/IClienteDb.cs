@@ -1,5 +1,5 @@
 ﻿using RestauranteMaMonolitica.Web.Data.Entities;
-using RestauranteMaMonolitica.Web.Data.Models;
+using RestauranteMaMonolitica.Web.Data.Models.Cliente;
 
 namespace RestauranteMaMonolitica.Web.Data.Interfaces
 {
@@ -8,8 +8,8 @@ namespace RestauranteMaMonolitica.Web.Data.Interfaces
         void SaveCliente(ClienteSaveModel cliente);
         void UpdateCliente(ClienteUpdateModel cliente);
         void RemoveCliente(ClienteRemoveModel cliente);
-        List<ClienteModel> GetClientes();
-        Task<ClienteModel> GetCliente(int IdCliente);
+        List<ClienteGetModel> GetClientes();
+        public ClienteGetModel GetCliente(int IdCliente);
         
 
     }

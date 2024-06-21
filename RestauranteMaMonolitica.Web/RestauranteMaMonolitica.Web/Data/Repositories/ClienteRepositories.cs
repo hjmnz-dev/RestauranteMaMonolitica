@@ -1,8 +1,8 @@
 ﻿using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Entities;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
-using RestauranteMaMonolitica.Web.Data.Models;
 using RestauranteMaMonolitica.Web.Data.Exceptions;
+using RestauranteMaMonolitica.Web.Data.Models.Cliente;
 
 namespace RestauranteMaMonolitica.Web.Data.Repositories
 {
@@ -23,7 +23,7 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
                 Nombre = clienteSaveModel.Nombre,
                 Telefono = clienteSaveModel.Telefono,
                 Email = clienteSaveModel.Email,
-                CreationUser = clienteSaveModel.CreationUser
+                creation_user = clienteSaveModel.creation_user
             };
 
             this.context.Cliente.Add(cliente);
@@ -40,9 +40,9 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
                 }
                 else
                 {
-                    clienteRemove.Deleted = clienteRemoveModel.Deleted;
-                    clienteRemove.DeleteDate = clienteRemoveModel.DeleteDate;
-                    clienteRemove.DeleteUser = clienteRemoveModel.DeleteUser;
+                    clienteRemove.deleted = clienteRemoveModel.deleted;
+                    clienteRemove.delete_date = clienteRemoveModel.delete_date;
+                    clienteRemove.delete_user = clienteRemoveModel.delete_user;
 
                     this.context.Cliente.Update(clienteRemove);
                     this.context.SaveChanges();
@@ -61,8 +61,8 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
             }
             else {
                 Cliente clienteUpdate = this.context.Cliente.Find(clienteUpdateModel.IdCliente);
-                clienteUpdate.ModifyDate = clienteUpdateModel.ModifyDate;
-                clienteUpdate.UserMod = clienteUpdateModel.UserMod;
+                clienteUpdate.modify_date = clienteUpdateModel.modify_date;
+                clienteUpdate.modify_user = clienteUpdateModel.modify_user;
                 clienteUpdate.Nombre = clienteUpdateModel.Nombre;
                 clienteUpdate.Telefono = clienteUpdateModel.Telefono;
                 clienteUpdate.Email = clienteUpdateModel.Email;
@@ -72,16 +72,16 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
             }
         }
 
-        public async Task<ClienteModel> GetCliente(int IdCliente)
+        public ClienteGetModel GetCliente(int IdCliente)
         {
-            var cliente = await this.context.Cliente.FindAsync(IdCliente);
+            var cliente = this.context.Cliente.Find(IdCliente);
 
             if (cliente == null)
             {
                 throw new ClienteDbException("Cliente no encontrado");
             }
-            else {
-                return new ClienteModel()
+            
+                return new ClienteGetModel()
                 {
                     IdCliente = cliente.IdCliente,
                     Nombre = cliente.Nombre,
@@ -90,16 +90,16 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
                 };
             }
 
-        }
-
-        public List<ClienteModel> GetClientes()
+        public List<ClienteGetModel> GetClientes()
         {
-            return this.context.Cliente.Select(clientes => new ClienteModel() { 
-            IdCliente = clientes.IdCliente,
-            Nombre = clientes.Nombre,
-            Telefono= clientes.Telefono,
-            Email = clientes.Email
+            return this.context.Cliente.Select(clientes => new ClienteGetModel()
+            {
+                IdCliente = clientes.IdCliente,
+                Nombre = clientes.Nombre,
+                Telefono = clientes.Telefono,
+                Email = clientes.Email
             }).ToList();
         }
+
     }
 }

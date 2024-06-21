@@ -1,8 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using RestauranteMaMonolitica.Web.Data.Context;
+using RestauranteMaMonolitica.Web.Data.DbObjects;
+using RestauranteMaMonolitica.Web.Data.Interfaces;
+using RestauranteMaMonolitica.Web.Data.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<RestauranteContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RestauranteContext")));
+builder.Services.AddScoped<IClienteDb, ClienteDb>();
+builder.Services.AddScoped<ClienteRepositories>();
+builder.Services.AddScoped<IEmpleadoDb, EmpleadoDb>();
+builder.Services.AddScoped<EmpleadoRepositories>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

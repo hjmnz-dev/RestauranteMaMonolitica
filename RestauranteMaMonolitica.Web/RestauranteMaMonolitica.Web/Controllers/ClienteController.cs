@@ -2,29 +2,32 @@
 using Microsoft.AspNetCore.Mvc;
 using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
+using RestauranteMaMonolitica.Web.Data.Models.Cliente;
+using RestauranteMaMonolitica.Web.Data.Repositories;
 
 namespace RestauranteMaMonolitica.Web.Controllers
 {
     public class ClienteController : Controller
     {
-        private readonly IClienteDb clienteDb;
+        private readonly ClienteRepositories clienteRepositories;
 
-        public ClienteController(IClienteDb clienteDb)
+        public ClienteController(ClienteRepositories clienteRepositories)
         {
-            this.clienteDb = clienteDb;
+            this.clienteRepositories = clienteRepositories;
         }
 
         // GET: ClienteController
         public ActionResult Index()
         {
-            var clientes = this.clienteDb.GetClientes();
+            var clientes = this.clienteRepositories.GetClientes();
             return View(clientes);
         }
 
         // GET: ClienteController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var cliente = this.clienteRepositories.GetCliente(id);
+            return View(cliente);
         }
 
         // GET: ClienteController/Create
@@ -36,10 +39,12 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // POST: ClienteController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(ClienteSaveModel clienteSave)
         {
             try
             {
+                clienteSave.creation_date = DateTime.Now;
+                this.clienteRepositories.SaveCliente(clienteSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -51,16 +56,21 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: ClienteController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var cliente = this.clienteRepositories.GetCliente(id);
+            return View(cliente);
+            
         }
 
         // POST: ClienteController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(ClienteUpdateModel clienteUpdate)
         {
             try
             {
+                clienteUpdate.modify_date = DateTime.Now;
+                clienteUpdate.modify_user = 1;
+                this.clienteRepositories.UpdateCliente(clienteUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -69,25 +79,5 @@ namespace RestauranteMaMonolitica.Web.Controllers
             }
         }
 
-        // GET: ClienteController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ClienteController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

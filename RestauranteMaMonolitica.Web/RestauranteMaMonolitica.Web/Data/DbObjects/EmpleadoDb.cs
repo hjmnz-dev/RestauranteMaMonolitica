@@ -1,7 +1,7 @@
 ﻿using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Entities;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
-using RestauranteMaMonolitica.Web.Data.Models;
+using RestauranteMaMonolitica.Web.Data.Models.Empleado;
 using RestauranteMaMonolitica.Web.Data.Repositories;
 
 namespace RestauranteMaMonolitica.Web.Data.DbObjects
@@ -15,12 +15,12 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
             this._empleadoRepositories = empleadoRepositories;
 
         }
-        public async Task<EmpleadoModel>GetEmpleado(int idEmpleado)
+        public EmpleadoGetModel GetEmpleado(int idEmpleado)
         {
-            return await _empleadoRepositories.GetEmpleado(idEmpleado);
+            return _empleadoRepositories.GetEmpleado(idEmpleado);
         }
 
-        public List<EmpleadoModel> GetEmpleados()
+        public List<EmpleadoGetModel> GetEmpleados()
         {
             return _empleadoRepositories.GetEmpleados();
         }

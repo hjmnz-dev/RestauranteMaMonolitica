@@ -1,8 +1,8 @@
 ﻿using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Entities;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
-using RestauranteMaMonolitica.Web.Data.Models;
 using RestauranteMaMonolitica.Web.Data.Exceptions;
+using RestauranteMaMonolitica.Web.Data.Models.Empleado;
 
 namespace RestauranteMaMonolitica.Web.Data.Repositories
 {
@@ -22,7 +22,7 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
                 IdEmpleado = empleadoSaveModel.IdEmpleado,
                 Nombre = empleadoSaveModel.Nombre,
                 Cargo = empleadoSaveModel.Cargo,
-                CreationUser = empleadoSaveModel.CreationUser
+                creation_user = empleadoSaveModel.creation_user
             };
 
             this.context.Empleado.Add(empleado);
@@ -39,9 +39,9 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
                 }
                 else
                 {
-                    empleadoRemove.Deleted = empleadoRemoveModel.Deleted;
-                    empleadoRemove.DeleteDate = empleadoRemoveModel.DeleteDate;
-                    empleadoRemove.DeleteUser = empleadoRemoveModel.DeleteUser;
+                    empleadoRemove.deleted = empleadoRemoveModel.deleted;
+                    empleadoRemove.delete_date = empleadoRemoveModel.delete_date;
+                    empleadoRemove.delete_user = empleadoRemoveModel.delete_user;
 
                     this.context.Empleado.Update(empleadoRemove);
                     this.context.SaveChanges();
@@ -61,8 +61,8 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
             else
             {
                 Empleado empleadoUpdate = this.context.Empleado.Find(empleadoUpdateModel.IdEmpleado);
-                empleadoUpdate.ModifyDate = empleadoUpdateModel.ModifyDate;
-                empleadoUpdate.UserMod = empleadoUpdateModel.UserMod;
+                empleadoUpdate.modify_date = empleadoUpdateModel.modify_date;
+                empleadoUpdate.modify_user = empleadoUpdateModel.modify_user;
                 empleadoUpdate.Nombre = empleadoUpdateModel.Nombre;
                 empleadoUpdate.Cargo = empleadoUpdateModel.Cargo;
 
@@ -71,30 +71,29 @@ namespace RestauranteMaMonolitica.Web.Data.Repositories
             }
         }
 
-        public async Task<EmpleadoModel> GetEmpleado(int IdEmpleado)
+        public EmpleadoGetModel GetEmpleado(int IdEmpleado)
         {
-            var empleado = await this.context.Empleado.FindAsync(IdEmpleado);
+            var empleado = this.context.Empleado.Find(IdEmpleado);
 
             if (empleado == null)
             {
                 throw new EmpleadoDbException("Empleado no encontrado");
             }
-            else
-            {
-                return new EmpleadoModel()
+            
+                return new EmpleadoGetModel()
                 {
                     IdEmpleado = empleado.IdEmpleado,
                     Nombre = empleado.Nombre,
                     Cargo = empleado.Cargo
-                    ,
+                    
                 };
-            }
+            
 
         }
 
-        public List<EmpleadoModel> GetEmpleados()
+        public List<EmpleadoGetModel> GetEmpleados()
         {
-            return this.context.Empleado.Select(empleados => new EmpleadoModel()
+            return this.context.Empleado.Select(empleados => new EmpleadoGetModel()
             {
                 IdEmpleado = empleados.IdEmpleado,
                 Nombre = empleados.Nombre,

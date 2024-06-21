@@ -1,6 +1,6 @@
 ﻿using RestauranteMaMonolitica.Web.Data.Entities;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
-using RestauranteMaMonolitica.Web.Data.Models;
+using RestauranteMaMonolitica.Web.Data.Models.Cliente;
 using RestauranteMaMonolitica.Web.Data.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -16,7 +16,7 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
             _clienteRepositories = clienteRepositories;
         }
 
-        public List<ClienteModel> GetClientes()
+        public List<ClienteGetModel> GetClientes()
         {
             return _clienteRepositories.GetClientes();
         }
@@ -35,9 +35,9 @@ namespace RestauranteMaMonolitica.Web.Data.DbObjects
         {
             _clienteRepositories.UpdateCliente(clienteUpdateModel);
         }
-        public async Task<ClienteModel> GetCliente(int idCliente)
+        public ClienteGetModel GetCliente(int idCliente)
         {
-            return await _clienteRepositories.GetCliente(idCliente);
+            return _clienteRepositories.GetCliente(idCliente);
         }
     }
 }

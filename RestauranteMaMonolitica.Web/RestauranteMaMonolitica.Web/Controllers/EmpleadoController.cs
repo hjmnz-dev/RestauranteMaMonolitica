@@ -2,30 +2,34 @@
 using Microsoft.AspNetCore.Mvc;
 using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
+using RestauranteMaMonolitica.Web.Data.Models.Cliente;
+using RestauranteMaMonolitica.Web.Data.Models.Empleado;
+using RestauranteMaMonolitica.Web.Data.Repositories;
 
 namespace RestauranteMaMonolitica.Web.Controllers
 {
     public class EmpleadoController : Controller
     {
 
-        private readonly IEmpleadoDb empleadoDb;
+        private readonly EmpleadoRepositories empleadoRepositories;
 
-        public EmpleadoController(IEmpleadoDb empleadoDb)
+        public EmpleadoController(EmpleadoRepositories empleadoRepositorie)
         {
-            this.empleadoDb = empleadoDb;
+            this.empleadoRepositories = empleadoRepositories;
         }
 
         // GET: EmpleadoController
         public ActionResult Index()
         {
-            var empleados = this.empleadoDb.GetEmpleados();
+            var empleados = this.empleadoRepositories.GetEmpleados();
             return View(empleados);
         }
 
         // GET: EmpleadoController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var empleado = this.empleadoRepositories.GetEmpleado(id);
+            return View(empleado);
         }
 
         // GET: EmpleadoController/Create
@@ -37,10 +41,12 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // POST: EmpleadoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(EmpleadoSaveModel empleadoSave)
         {
             try
             {
+                empleadoSave.creation_date = DateTime.Now;
+                this.empleadoRepositories.SaveEmpleado(empleadoSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -52,16 +58,20 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: EmpleadoController/Edit/5
         public ActionResult Edit(int id)
         {
+            var empleado = this.empleadoRepositories.GetEmpleado(id);
             return View();
         }
 
         // POST: EmpleadoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(EmpleadoUpdateModel empleadoUpdate)
         {
             try
             {
+                empleadoUpdate.modify_date = DateTime.Now;
+                empleadoUpdate.modify_user = 1;
+                this.empleadoRepositories.UpdateEmpleado(empleadoUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -70,25 +80,5 @@ namespace RestauranteMaMonolitica.Web.Controllers
             }
         }
 
-        // GET: EmpleadoController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: EmpleadoController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
