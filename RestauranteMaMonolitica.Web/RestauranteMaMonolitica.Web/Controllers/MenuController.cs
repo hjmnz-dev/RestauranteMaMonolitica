@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RestauranteMaMonolitica.Web.BL.Interfaces;
 using RestauranteMaMonolitica.Web.Data.DbObjects;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models;
@@ -8,16 +9,17 @@ namespace RestauranteMaMonolitica.Web.Controllers
 {
     public class MenuController : Controller
     {
-        private readonly IMenuRepositories _menuRepository;
+        private readonly IMenuService menuService;
 
-        public MenuController(IMenuRepositories menuRepository)
+        public MenuController(IMenuService menuService)
         {
-            _menuRepository = menuRepository;
+            menuService = menuService;
+            
         }
         // GET: MenuController
         public ActionResult Index()
         {
-            var menus = _menuRepository.GetMenus();
+            var menus = menuService.GetMenus();
             return View(menus);
         }
 
@@ -25,7 +27,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
         public ActionResult Details(int id)
         {
 
-            var menu = this._menuRepository.GetMenu(id);
+            var menu = this.menuService.GetMenu(id);
 
             return View(menu);
         }
@@ -46,7 +48,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             {
                 menuSaveMode.creation_date = DateTime.Now;
                 menuSaveMode.creation_user = 1;
-                this._menuRepository.Save(menuSaveMode);
+                this.menuService.SaveMenu(menuSaveMode);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -59,7 +61,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
         public ActionResult Edit(int id)
         {
 
-            var menu = this._menuRepository.GetMenu(id);
+            var menu = this.menuService.GetMenu(id);
             return View(menu);
         }
 
@@ -73,7 +75,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
                 menuUpdateModel.ModifyDate = DateTime.Now;
                 menuUpdateModel.CreationUser = 1;
 
-                this._menuRepository.Uptade(menuUpdateModel);
+                this.menuService.UptadeMenu(menuUpdateModel);
 
                 return RedirectToAction(nameof(Index));
             }
