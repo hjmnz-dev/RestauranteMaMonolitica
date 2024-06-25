@@ -16,6 +16,9 @@ builder.Services.AddDbContext<RestauranteContext>(options => options.UseSqlServe
 builder.Services.AddScoped<IMenuRepositories, MenuDb>();
 builder.Services.AddScoped<MenuRepositories>(); // Registro de MenuRepositories
 
+builder.Services.AddTransient<IMenuService, MenuService>();
+
+
 var app = builder.Build();
 
 
