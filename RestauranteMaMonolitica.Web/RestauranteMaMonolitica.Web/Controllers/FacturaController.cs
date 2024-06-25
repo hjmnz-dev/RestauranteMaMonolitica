@@ -13,7 +13,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
 
         public FacturaController(IFacturaDb facturaDb) 
         {
-           this.facturaDb = facturaDb;
+            this.facturaDb = facturaDb;
            
         }
         // GET: FacturaController
