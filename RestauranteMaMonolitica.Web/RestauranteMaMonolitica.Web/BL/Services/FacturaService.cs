@@ -96,6 +96,7 @@ namespace RestauranteMaMonolitica.Web.BL.Services
                 {
                     result.Sucess = false;
                     result.Message = "La longitud del numero debe ser de 10.";
+
                     return result;
                 }
 
@@ -151,7 +152,7 @@ namespace RestauranteMaMonolitica.Web.BL.Services
                     result.Message = "La Factura no puede ser nulo.";
                     return result;
                 }
-                //encapsular esto y terminar las validaciones
+                
                 string[] parts = facturaSave.Total.ToString().Split('.');
 
 
@@ -173,7 +174,7 @@ namespace RestauranteMaMonolitica.Web.BL.Services
             catch (Exception ex)
             {
                 
-                //añadir un log information y un log error
+               
                 result.Sucess = false;
                 result.Message = ("Ocurrio un error Guardando los Datos");
                 this.logger.LogError(result.Message, ex.ToString());

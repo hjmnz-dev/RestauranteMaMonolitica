@@ -34,8 +34,20 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: FacturaController/Details/5
         public ActionResult Details(int id)
         {
-            var Factura = facturaService.GetFactura(id);
-            return View(Factura);
+
+            var result = facturaService.GetFactura(id);
+
+            if (!result.Sucess)
+            
+              
+                ViewBag.Message = result.Message;
+            
+
+            var factura = result.Data as FacturaGetModel;
+
+           
+
+            return View(factura);
         }
 
         // GET: FacturaController/Create
@@ -64,8 +76,19 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: FacturaController/Edit/5
         public ActionResult Edit(int id)
         {
-            var Factura = facturaService.GetFactura(id);
-            return View(Factura);
+            var result = facturaService.GetFactura(id);
+
+            if (!result.Sucess)
+
+
+                ViewBag.Message = result.Message;
+
+
+            var factura = result.Data as FacturaGetModel;
+
+
+
+            return View(factura);
         }
 
         // POST: FacturaController/Edit/5
