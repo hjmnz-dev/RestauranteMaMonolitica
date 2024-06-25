@@ -1,4 +1,5 @@
-﻿using RestauranteMaMonolitica.Web.Data.Context;
+﻿using RestauranteMaMonolitica.Web.BL.Core;
+using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Entities;
 using RestauranteMaMonolitica.Web.Data.Exceptions;
 using RestauranteMaMonolitica.Web.Data.Models;
@@ -45,7 +46,34 @@ namespace RestauranteMaMonolitica.Web.Data.Helpers
             factura.creation_user = saveModel.ChangeUser;
         }
 
+        public static bool IsNullOrWhitespace(object obj, FacturaServiceResult result, string errorMessage)
+        {
+            if (obj == null || string.IsNullOrWhiteSpace(obj.ToString()))
+            {
+                result.Sucess = false;
+                result.Message = errorMessage;
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsInvalidDecimalLength(decimal value, FacturaServiceResult result, string errorMessage, int maxIntegerDigits, int maxDecimalDigits)
+        {
+            string[] parts = value.ToString().Split('.');
+            int integerDigits = parts[0].Length;
+            int decimalDigits = parts.Length > 1 ? parts[1].Length : 0;
+
+            if (integerDigits + decimalDigits > maxIntegerDigits || decimalDigits > maxDecimalDigits)
+            {
+                result.Sucess = false;
+                result.Message = errorMessage;
+                return true;
+            }
+            return false;
+        }
     }
+
 }
+
 
     

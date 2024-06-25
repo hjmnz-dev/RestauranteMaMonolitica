@@ -3,6 +3,7 @@ using RestauranteMaMonolitica.Web.BL.Core;
 using RestauranteMaMonolitica.Web.BL.Exceptions;
 using RestauranteMaMonolitica.Web.BL.Interfaces;
 using RestauranteMaMonolitica.Web.Data.DbObjects;
+using RestauranteMaMonolitica.Web.Data.Helpers;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models;
 using System.Reflection.Metadata.Ecma335;
@@ -65,54 +66,29 @@ namespace RestauranteMaMonolitica.Web.BL.Services
 
         public FacturaServiceResult updateFactura(FacturaUpdateModel facturaUpdate) 
         {
-            FacturaServiceResult result = new FacturaServiceResult();
             
+
+            FacturaServiceResult result = new FacturaServiceResult();
+
             try
             {
-
-                if (facturaUpdate is null) 
-                {
-                    result.Sucess = false;
-                    result.Message = "La Factura no puede ser nulo.";
+                if (FacturaHelper.IsNullOrWhitespace(facturaUpdate, result, "La Factura no puede ser nulo."))
                     return result;
-                }
 
-                //                if (facturaUpdate is null) 
-                //                {
-                //                    throw new FacturaServiceException("La Factura no puede ser nulo.");
-                //;               }
-
-                
-                string[] parts = facturaUpdate.Total.ToString().Split('.'); 
-
-                
-                int integerDigits = parts[0].Length;
-
-                
-                int decimalDigits = parts.Length > 1 ? parts[1].Length : 0;
-
-              
-                if (integerDigits + decimalDigits > 10 || decimalDigits > 2)
-                {
-                    result.Sucess = false;
-                    result.Message = "La longitud del numero debe ser de 10.";
-
+                if (FacturaHelper.IsInvalidDecimalLength(facturaUpdate.Total, result, "La longitud del numero debe ser de 10.", 10, 2))
                     return result;
-                }
 
                 this.FacturaDb.updateFactura(facturaUpdate);
-              
-                
             }
             catch (Exception ex)
             {
-
                 result.Sucess = false;
-                result.Message = ("Ocurrio un error Actualizando los Datos.");
+                result.Message = "Ocurrio un error Actualizando los Datos.";
                 this.logger.LogError(result.Message, ex.ToString());
             }
 
-            return result;  
+            return result;
+           
         }
 
        public  FacturaServiceResult removeFactura(FacturaRemoveModel facturaRemove) 
@@ -142,45 +118,25 @@ namespace RestauranteMaMonolitica.Web.BL.Services
        public FacturaServiceResult saveFactura(FacturaSaveModel facturaSave) 
         {
             FacturaServiceResult result = new FacturaServiceResult();
-          
+
             try
             {
-
-                if (facturaSave is null)
-                {
-                    result.Sucess = false;
-                    result.Message = "La Factura no puede ser nulo.";
+                if (FacturaHelper.IsNullOrWhitespace(facturaSave, result, "La Factura no puede ser nulo."))
                     return result;
-                }
-                
-                string[] parts = facturaSave.Total.ToString().Split('.');
 
-
-                int integerDigits = parts[0].Length;
-
-
-                int decimalDigits = parts.Length > 1 ? parts[1].Length : 0;
-
-
-                if (integerDigits + decimalDigits > 10 || decimalDigits > 2)
-                {
-                    result.Sucess = false;
-                    result.Message = "La longitud del numero debe ser de 10.";
+                if (FacturaHelper.IsInvalidDecimalLength(facturaSave.Total, result, "La longitud del numero debe ser de 10.", 10, 2))
                     return result;
-                }
 
                 this.FacturaDb.saveFactura(facturaSave);
             }
             catch (Exception ex)
             {
-                
-               
                 result.Sucess = false;
-                result.Message = ("Ocurrio un error Guardando los Datos");
+                result.Message = "Ocurrio un error Actualizando los Datos.";
                 this.logger.LogError(result.Message, ex.ToString());
             }
 
-            return result;
+            return result; 
         }
 
 
