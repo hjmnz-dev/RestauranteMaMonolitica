@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using RestauranteMaMonolitica.Web.BL.Interfaces;
+using RestauranteMaMonolitica.Web.BL.Services;
 using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.DbObjects;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
@@ -12,6 +14,8 @@ builder.Services.AddDbContext<RestauranteContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("RestauranteContext"))); 
 
 builder.Services.AddScoped<IFacturaDb, FacturaDb>();
+
+builder.Services.AddTransient<IFacturaService, FacturaService>();
 
 var app = builder.Build();
 

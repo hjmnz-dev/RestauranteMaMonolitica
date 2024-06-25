@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RestauranteMaMonolitica.Web.BL.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models;
@@ -9,24 +10,31 @@ namespace RestauranteMaMonolitica.Web.Controllers
     
     public class FacturaController : Controller
     {
-        private readonly IFacturaDb facturaDb;
+        private readonly IFacturaService facturaService;
 
-        public FacturaController(IFacturaDb facturaDb) 
+        public FacturaController(IFacturaService facturaService) 
         {
-            this.facturaDb = facturaDb;
+           
+            this.facturaService = facturaService;
            
         }
         // GET: FacturaController
         public ActionResult Index()
         {
-            var Factura = this.facturaDb.GetFacturas();
-            return View(Factura);
+            var result = this.facturaService.GetFacturas();
+            if (!result.Sucess) 
+            
+            ViewBag.Message = result.Message;
+
+            var factura = (List<FacturaGetModel>)result.Data;
+            return View(factura);
+            
         }
 
         // GET: FacturaController/Details/5
         public ActionResult Details(int id)
         {
-            var Factura = facturaDb.GetFactura(id);
+            var Factura = facturaService.GetFactura(id);
             return View(Factura);
         }
 
@@ -44,7 +52,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             try
             {   facturaSave.ChangeDate = DateTime.Now;
                 facturaSave.ChangeUser = 1;
-                this.facturaDb.saveFactura(facturaSave);
+                this.facturaService.saveFactura(facturaSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -56,7 +64,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: FacturaController/Edit/5
         public ActionResult Edit(int id)
         {
-            var Factura = facturaDb.GetFactura(id);
+            var Factura = facturaService.GetFactura(id);
             return View(Factura);
         }
 
@@ -69,7 +77,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             {
                facturaUpdateModel.ChangeDate = DateTime.Now;
                facturaUpdateModel.ChangeUser = 1;
-                this.facturaDb.updateFactura(facturaUpdateModel);
+                this.facturaService.updateFactura(facturaUpdateModel);
                 return RedirectToAction(nameof(Index));
             }
             catch
