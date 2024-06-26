@@ -7,9 +7,6 @@ namespace RestauranteMaMonolitica.Web.Data.Models.Empleado
         public int modify_user { get; set; }
         public DateTime modify_date { get; set; }
 
-        public EmpleadoUpdateModel()
-        {
-            this.modify_date = DateTime.Now;
-        }
+      
     }
 }

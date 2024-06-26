@@ -59,7 +59,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
         public ActionResult Edit(int id)
         {
             var empleado = this.empleadoRepositories.GetEmpleado(id);
-            return View();
+            return View(empleado);
         }
 
         // POST: EmpleadoController/Edit/5
