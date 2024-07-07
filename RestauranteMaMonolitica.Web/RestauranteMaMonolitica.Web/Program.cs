@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using RestauranteMaMonolitica.Web.BL.Core;
+using RestauranteMaMonolitica.Web.BL.Services;
 using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.DbObjects;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
@@ -13,6 +15,9 @@ builder.Services.AddScoped<IClienteDb, ClienteDb>();
 builder.Services.AddScoped<ClienteRepositories>();
 builder.Services.AddScoped<IEmpleadoDb, EmpleadoDb>();
 builder.Services.AddScoped<EmpleadoRepositories>();
+
+//Agregar dependencias del BL
+builder.Services.AddTransient<IClienteService,ClienteService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

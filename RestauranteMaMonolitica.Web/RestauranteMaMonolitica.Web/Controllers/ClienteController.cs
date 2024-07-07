@@ -4,29 +4,37 @@ using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models.Cliente;
 using RestauranteMaMonolitica.Web.Data.Repositories;
+using RestauranteMaMonolitica.Web.BL.Interfaces;
 
 namespace RestauranteMaMonolitica.Web.Controllers
 {
     public class ClienteController : Controller
     {
-        private readonly ClienteRepositories clienteRepositories;
+        private readonly IClienteService clienteService;
 
-        public ClienteController(ClienteRepositories clienteRepositories)
+        public ClienteController(IClienteService clienteService)
         {
-            this.clienteRepositories = clienteRepositories;
+            this.clienteService = clienteService;
         }
 
         // GET: ClienteController
         public ActionResult Index()
         {
-            var clientes = this.clienteRepositories.GetClientes();
+            var result = this.clienteService.GetClientes();
+
+            if (!result.Success)
+            {
+                ViewBag.Message =  result.Message;
+            }
+
+            var clientes = (List<ClienteGetModel>)result.Data;
             return View(clientes);
         }
 
         // GET: ClienteController/Details/5
         public ActionResult Details(int id)
         {
-            var cliente = this.clienteRepositories.GetCliente(id);
+            var cliente = this.clienteService.GetCliente(id);
             return View(cliente);
         }
 
@@ -44,7 +52,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             try
             {
                 clienteSave.creation_date = DateTime.Now;
-                this.clienteRepositories.SaveCliente(clienteSave);
+                this.clienteService.SaveCliente(clienteSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -56,7 +64,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: ClienteController/Edit/5
         public ActionResult Edit(int id)
         {
-            var cliente = this.clienteRepositories.GetCliente(id);
+            var cliente = this.clienteService.GetCliente(id);
             return View(cliente);
             
         }
@@ -70,7 +78,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             {
                 clienteUpdate.modify_date = DateTime.Now;
                 clienteUpdate.modify_user = 1;
-                this.clienteRepositories.UpdateCliente(clienteUpdate);
+                this.clienteService.UpdateCliente(clienteUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch

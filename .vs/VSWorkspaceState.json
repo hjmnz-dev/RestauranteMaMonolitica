@@ -1,6 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\RestauranteMaMonolitica.Web",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\BL",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\BL\\Exceptions",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\BL\\Interfaces",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\BL\\Services",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Controllers",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Views",
+    "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\Views\\Cliente"
   ],
+  "SelectedNode": "\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web\\RestauranteMaMonolitica.Web.csproj",
   "PreviewInSolutionExplorer": false
 }
