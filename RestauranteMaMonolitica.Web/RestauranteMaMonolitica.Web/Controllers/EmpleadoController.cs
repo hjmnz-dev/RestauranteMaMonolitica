@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RestauranteMaMonolitica.Web.BL.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Context;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models.Cliente;
@@ -11,24 +12,24 @@ namespace RestauranteMaMonolitica.Web.Controllers
     public class EmpleadoController : Controller
     {
 
-        private readonly EmpleadoRepositories empleadoRepositories;
+        private readonly IEmpleadoService empleadoService;
 
-        public EmpleadoController(EmpleadoRepositories empleadoRepositories)
+        public EmpleadoController(IEmpleadoService empleadoService)
         {
-            this.empleadoRepositories = empleadoRepositories;
+            this.empleadoService = empleadoService;
         }
 
         // GET: EmpleadoController
         public ActionResult Index()
         {
-            var empleados = this.empleadoRepositories.GetEmpleados();
+            var empleados = this.empleadoService.GetEmpleados();
             return View(empleados);
         }
 
         // GET: EmpleadoController/Details/5
         public ActionResult Details(int id)
         {
-            var empleado = this.empleadoRepositories.GetEmpleado(id);
+            var empleado = this.empleadoService.GetEmpleado(id);
             return View(empleado);
         }
 
@@ -46,7 +47,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             try
             {
                 empleadoSave.creation_date = DateTime.Now;
-                this.empleadoRepositories.SaveEmpleado(empleadoSave);
+                this.empleadoService.SaveEmpleados(empleadoSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -58,7 +59,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
         // GET: EmpleadoController/Edit/5
         public ActionResult Edit(int id)
         {
-            var empleado = this.empleadoRepositories.GetEmpleado(id);
+            var empleado = this.empleadoService.GetEmpleado(id);
             return View(empleado);
         }
 
@@ -71,7 +72,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             {
                 empleadoUpdate.modify_date = DateTime.Now;
                 empleadoUpdate.modify_user = 1;
-                this.empleadoRepositories.UpdateEmpleado(empleadoUpdate);
+                this.empleadoService.UpdateEmpleados(empleadoUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch

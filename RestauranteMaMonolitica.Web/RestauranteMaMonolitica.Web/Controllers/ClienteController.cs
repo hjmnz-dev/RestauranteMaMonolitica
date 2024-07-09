@@ -5,6 +5,7 @@ using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models.Cliente;
 using RestauranteMaMonolitica.Web.Data.Repositories;
 using RestauranteMaMonolitica.Web.BL.Interfaces;
+using RestauranteMaMonolitica.Web.BL.Core;
 
 namespace RestauranteMaMonolitica.Web.Controllers
 {
@@ -52,7 +53,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             try
             {
                 clienteSave.creation_date = DateTime.Now;
-                this.clienteService.SaveCliente(clienteSave);
+                this.clienteService.SaveClientes(clienteSave);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -78,7 +79,7 @@ namespace RestauranteMaMonolitica.Web.Controllers
             {
                 clienteUpdate.modify_date = DateTime.Now;
                 clienteUpdate.modify_user = 1;
-                this.clienteService.UpdateCliente(clienteUpdate);
+                this.clienteService.UpdateClientes(clienteUpdate);
                 return RedirectToAction(nameof(Index));
             }
             catch
