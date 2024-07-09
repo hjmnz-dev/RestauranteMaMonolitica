@@ -1,6 +1,8 @@
 ﻿using RestauranteMaMonolitica.Web.BL.Core;
 using RestauranteMaMonolitica.Web.BL.Exceptions;
 using RestauranteMaMonolitica.Web.BL.Interfaces;
+using RestauranteMaMonolitica.Web.BL.LogsLogic.Interfaces;
+using RestauranteMaMonolitica.Web.BL.Validations;
 using RestauranteMaMonolitica.Web.Data.Interfaces;
 using RestauranteMaMonolitica.Web.Data.Models.Cliente;
 using System.CodeDom;
@@ -11,9 +13,10 @@ namespace RestauranteMaMonolitica.Web.BL.Services
     {
 
         private readonly IClienteDb clienteDb;
-        private readonly ILogger<ClienteService> logger;
+        private  readonly ClienteValidation clienteValidation;
+        private readonly IGenericLog logger;
 
-        public ClienteService(IClienteDb clienteDb, ILogger<ClienteService> logger)
+        public ClienteService(IClienteDb clienteDb, IGenericLog logger)
         {
             this.clienteDb = clienteDb;
             this.logger = logger;
@@ -31,7 +34,8 @@ namespace RestauranteMaMonolitica.Web.BL.Services
                 
                 result.Success = false;
                 result.Message = "Ocurrio un error obteniendo los clientes";
-                this.logger.LogError(result.Message, ex.ToString());
+                this.logger.LogError(result.Message, ex.InnerException);
+                this.logger.LogInformation(result.Message);
 
             }
             return result;
@@ -42,6 +46,7 @@ namespace RestauranteMaMonolitica.Web.BL.Services
             ServiceResult result = new ServiceResult();
             try
             {
+                clienteValidation.Cl
                 result.Data = clienteDb.GetCliente(clienteId);
             }
             catch (Exception ex)
